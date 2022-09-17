@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-theme-bckgrnd : White;
+    --light-theme-txt : black;
+    --light-theme-btn-hover : #004a63;
+    --aside-light-theme-bckgrnd-clr : #008bb9;
+    --aside-light-theme-txt : White;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+/* Designing asidebar */
+
+aside {
+    text-align: center;
+    padding-top: 2rem;
+    color: var(--aside-light-theme-txt);
+    background-color: var(--aside-light-theme-bckgrnd-clr);
+    min-width: 12rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 25rem;
+}
+
+ .hamburger {
+    display: none;
+}
+
+aside h2 {
+    font-size: 1.9rem;
+}
+
+aside .navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+aside .navbar a {
+    color: var(--light-text-ligt-theme);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+aside .navbar a:hover {
+    font-size: 1.2rem;
+}
+
+.navbar #setting {
+    margin-top: 3rem;
+}
+
+
+/* Designing main-section */
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--light-theme-bckgrnd);
+    color: var(--light-theme-txt);
+}
+
+
+/* Designing Header */
+
+
+header {
+    display: grid;
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    box-shadow: 0px 2px 5px black;
+    /* align-items: center; */
+}
+
+header h1 {
+    font-size: 2.1rem;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type = "search"] {
+    background-color: rgba(206, 206, 206, 0.8);
+    width: 60%;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.searchbar a {
+    color: var(--light-theme-txt);
+}
+
+.toggle-theme {
+    margin-right: 1rem;
+}
+
+/* Designing bell animation */
+
+.fa-bell {
+    margin-right: auto;
+}
+
+ .fa-bell:hover {
+    cursor: pointer;
+    color: rgb(223, 190, 0);
+    animation: ring 1s 0.1s;
+    transform: scale(1.1);
+}
+
+@keyframes ring {
+    0% {transform: rotate(0deg);}
+    20% {transform: rotate(11deg);}
+    40% {transform: rotate(-11deg);}
+    60% {transform: rotate(11deg);}
+    80% {transform: rotate(-11deg);}
+    100% {transform: rotate(0deg);}
+}
+
+
+/* Designing sun animation */
+
+.fa-sun {
+    transition: transform 0.2s;
+    margin-left: 1.5rem;
+}
+
+ .fa-sun:hover {
+    color: #006485;
+    cursor: pointer;
+    animation: rotate 2s 0.1s;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+/* Designing logo and buttons */
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo .btn {
+    margin-right: 1rem;
+}
+
+.logo .btn button {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: var(--light-theme-bckgrnd);
+    font-weight: 600;
+    background-color: var(--aside-light-theme-bckgrnd-clr);
+    border-radius: 0.5rem;
+}
+
+.logo .btn button:hover {
+    cursor: pointer;
+    background-color: var(--light-theme-btn-hover);
+}
+
+
+/* Designing main */
+
+
+main {
+    background-color: rgb(222, 222, 222);
+    padding: 1rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 1rem;
+}
+
+main #special {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+main .projects {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.projects .practiced {
+    background-color: var(--light-theme-bckgrnd);
+    height: 250px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(73, 73, 73);
+}
+
+.practiced {
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.practiced img {
+    max-width: 450px;
+    border: 1px solid black;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+
+
+/* Designing other information */
+
+.other-information {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px);
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+    height: 900px;
+}
+
+.other-information p {
+    margin: 1.5rem 0;
+}
+
+.announcement, .trending {
+    min-height: 250px;
+    /* max-height: 350px; */
+}
+
+.trending {
+    margin-top: 2rem;
+}
+
+
+.announcement div, .trending div {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    /* overflow-y: scroll; */
+    min-height: 80%;
+    background-color: var(--light-theme-bckgrnd);
+    padding: 00.5rem;
+}
+
+
+
+/* Adding media query to change navigation into hamburger  */
+
+@media screen and (max-width : 812px) {
+
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: none;
+    }
+
+    aside.active {
+        display: grid;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+        padding: 0.5rem;
+        width: 40px;
+        height: 21px;
+    }
+
+     .hamburger .bar {
+        height: 3px;
+        width: 100%;
+        background-color: black;
+    }
+
+    .searchbar {
+        margin-top: 1rem;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo h1 {
+        margin-bottom: 5px;
+    }
+
+}
+
+
+
+@media screen and (max-width : 612px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main .projects {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+}
